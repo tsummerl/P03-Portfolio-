@@ -5,13 +5,13 @@
 // color palette - these colors will be the color swatches of the Colors section
 
 $color-1: #6889c2; // Cornflower Blue - Action color
-$color-2: #49494d; // Dark Blue
-$color-3: #e49f5f; // Red
-$color-4: #e6e6e6; // light grey
+$color-2: #49494d; // Dark gray
+$color-3: #f79b4b; // orange
+$color-4: #e6e6e6; // light gray
 $color-5: #ffffff; // white
+$color-6: #7b7b81;
 
 // additional colors
-
 $success: #80b160; // green
 $alert: $color-3;  // red
 
@@ -19,6 +19,7 @@ $alert: $color-3;  // red
 
 $primary-font: 'Helvetica Neue', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
+$tertiary-font: 'Barlow Condensed', 'Open Sans', sans-serif;
 
 /* -------------------------------- 
 
@@ -139,12 +140,8 @@ xPage title
 -------------------------------- */
 
 main > h1 {
-	color: $color-2;
-
-	@include MQ(L) {
-		/* title goes into the header on big devices */
-		color: $color-5;
-	}
+	color: $color-1;
+	text-align: left;
 }
 
 /* -------------------------------- 
@@ -152,45 +149,53 @@ main > h1 {
 xTypography 
 
 -------------------------------- */
-.bio{
-	color: $color-1;
-	font-size: 1.2em;
+h1 > span{
+	text-transform: uppercase;
+	color: $color-3;
+	font-weight: 700;
 }
-h1, h2 {
-	font-family: $secondary-font;
-	color: $color-2;
+.mini-bio{
+	margin-top:1em;
+	color: $color-6;
+	font-size: 1.4em;
 }
 h3{
 	font-family: $secondary-font;
 	color: $color-3;
-	font-weight: 500;
+	font-weight: 600;
 	text-transform: uppercase;
 	padding-bottom: 1em;
 	display: inline-block;
 }
 h1 {
-	font-size: 2.4rem;
-	font-weight: 300;
+	font-family: $tertiary-font;
+	font-size: 4.4rem;
+	font-weight: 500;
 	line-height: 1.2;
 	margin: 0 0 .4em;
+	max-width: 80rem;
 
 	@include MQ(S) {
-		font-size: 3.2rem;
+		font-size: 5.2rem;
 	}
 
 	@include MQ(M) {
-		font-size: 4rem;
+		font-size: 7rem;
 	}
 }
 
 h2 {
-	font-weight: bold;
+	font-family: $tertiary-font;
+	font-size: 2em;
+	color: $color-3;
+	font-weight: 500;
 	text-transform: uppercase;
-	margin: 1em 0;
+	margin-bottom: 1em;
+	max-width: 80rem;
 
-	@include MQ(S) {
-		font-size: 1.8rem;
-		margin: 1em 0 1.4em;
+	@include MQ(M) {
+		font-size: 2.5em;
+		margin: 0;
 	}
 }
 
@@ -209,6 +214,91 @@ p {
 		line-height: 1.6;
 	}
 }
+/* -------------------------------- 
+
+Portfolio Buttons
+
+-------------------------------- */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .portfolio-item {
+	width:48%;
+    padding-bottom:48%;
+    margin:1%;
+    overflow:hidden;
+    position:relative;
+    float:left;
+	position: relative;
+	margin: 2%;
+	overflow: hidden;
+	max-width: 100%;
+	
+	img {
+		object-fit: cover;
+		display: block;
+		width: auto;
+		height: auto;
+		-moz-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+		position:absolute;
+		min-width:100%;
+		min-height:100%;
+		top:0%;
+		left:0
+	  }
+	  &:hover img {
+		-moz-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	  }
+	  /* 
+	  by default, overlay is visible… 
+	  */
+	  .portfolio-item-overlay.top {
+		top: 100%;
+	  }
+	  &:hover .portfolio-item-overlay.top 
+	  {
+		cursor: pointer;
+		top: 0;
+		background-color: rgba(155, 70, 70, 0.5);
+	  }
+  }
+  .portfolio-item-overlay.top 
+  {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+	width: 100%; 
+	
+	-moz-transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+  }
+/* -------------------------------- 
+
+Background Information
+
+-------------------------------- */
+.col-education{
+	padding-top: 1em;
+	border: none;
+	@include MQ(M) {
+		border-top: 0.1em solid $color-4;
+		padding-top: 2em; 
+	}
+}
+
 
 /* -------------------------------- 
 
