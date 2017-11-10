@@ -13,12 +13,15 @@ html * {
 	-moz-osx-font-smoothing: grayscale;
 }
 .container{
-	margin: 1em;
+	padding: 0 1em;
+	@include MQ(S) {
+		padding: 0 2em;
+	}
 	@include MQ(M) {
-		margin: 2em;
+		padding: 0 4em;
 	}
 	@include MQ(L) {
-		margin: 4em;
+		padding: 0 8em;
 	}
 }
 html {
@@ -269,10 +272,6 @@ header {
 }
 
 main {
-	width: 90%;
-	max-width: $M;
-	margin: 0 auto;
-
 	> h1 {
 		text-align: left;
 		margin-top: 0.5em;

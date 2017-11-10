@@ -10,7 +10,8 @@ $color-3: #f79b4b; // orange
 $color-4: #e6e6e6; // light gray
 $color-5: #ffffff; // white
 $color-6: #7b7b81;
-
+$color-6: #7b7b81;
+$color-7: #3a4d6e;
 // additional colors
 $success: #80b160; // green
 $alert: $color-3;  // red
@@ -30,107 +31,6 @@ xBackground
 body {
 	/* this is the page background */
 	background-color: $color-5;
-}
-
-/* -------------------------------- 
-
-xPatterns
-
--------------------------------- */
-
-.cd-box {
-	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
-	border: 1px solid $color-4;
-	border-radius: 3px;
-	background: $color-5;
-	box-shadow: 0 1px 1px rgba(#000, .05);
-	padding: 6px;
-}
-
-/* -------------------------------- 
-
-xNavigation 
-
--------------------------------- */
-
-header {
-	background-color: $color-2;
-}
-
-.cd-logo {
-	/* logo box style */
-	background-color: $color-1;
-	width: 120px;
-
-	@include MQ(M) {
-		width: 180px;
-	}
-}
-
-.cd-main-nav {
-	/* main navigation background color - full screen on small devices */
-	background: $color-2;
-
-	li a {
-		color: $color-5;
-		border-color: lighten($color-2, 5%);
-	}
-
-	@include MQ(M) {
-		li a {
-			color: lighten($color-2, 40%);
-
-			&.selected {
-				color: $color-5;
-				box-shadow: 0 2px 0 $color-1;
-			}
-
-			.no-touch &:hover {
-				color: $color-5;
-			}
-		}
-	}
-}
-
-.cd-nav-trigger span {
-	/* hamburger menu */
-	background-color: $color-5;
-
-	&::before,
-	&::after {
-		/* upper and lower lines */
-		background-color: $color-5;
-	}
-}
-
-.nav-is-visible .cd-nav-trigger span {
-	/* hide line in the center on mobile when nav is visible */
-	background-color: rgba($color-5, 0);
-
-	&::before, &::after {
-		/* preserve visibility of upper and lower lines - close icon */
-		background-color: rgba($color-5, 1);
-	}
-}
-
-.cd-download {
-	/* download button top-right visible on big devices */
-	background-color: lighten($color-2, 10%);
-
-	.no-touch &:hover {
-		background-color: lighten($color-2, 15%);
-	}
-
-	span {
-		/* tooltip */
-		background: $color-1;
-		color: $color-5;
-
-		&::before {
-			/* right arrow color */
-			border-color: $color-1;
-		}
-	}
 }
 
 /* -------------------------------- 
@@ -155,9 +55,9 @@ h1 > span{
 	font-weight: 700;
 }
 .mini-bio{
-	margin-top:1em;
+	text-transform: uppercase;
 	color: $color-6;
-	font-size: 1.4em;
+	font-size: 1.2em;
 }
 h3{
 	font-family: $secondary-font;
@@ -172,7 +72,6 @@ h1 {
 	font-size: 4.4rem;
 	font-weight: 500;
 	line-height: 1.2;
-	margin: 0 0 .4em;
 	max-width: 80rem;
 
 	@include MQ(S) {
@@ -200,8 +99,8 @@ h2 {
 }
 
 p {
-	font-size: 1.4rem;
-	line-height: 1.4;
+	font-size: 1.5rem;
+	line-height: 1.8;
 	color: lighten($color-2, 25%);
 
 	a {
@@ -216,7 +115,57 @@ p {
 }
 /* -------------------------------- 
 
-Portfolio Buttons
+xPortfolio
+
+-------------------------------- */
+.background-img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+
+	img {
+		flex-shrink: 0;
+		min-width: 100%;
+		min-height: 100%
+	}
+	margin: 0 -1em;
+	@include MQ(S) {
+		margin: 0 -2em;
+	}
+	@include MQ(M) {
+		margin: 0 -4em;
+	}
+	@include MQ(L) {
+		margin: 0 -8em;
+	}
+}
+.background-overlay{
+	position: absolute;
+	top: auto;
+	padding: 1em;
+	// background-color: rgba(246, 239, 250,0.5);
+	h1 span{
+		color: rgb(255, 255, 255);
+	}
+	p.mini-bio{
+		color: rgb(255, 255, 255);
+		font-size: 1em;
+		line-height: 1;
+		@include MQ(S) {
+			font-size: 1.4em;
+			line-height: 1;
+		}
+	}
+}
+.grayout{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}
+/* -------------------------------- 
+
+xPortfolio Buttons
 
 -------------------------------- */
 * {
@@ -228,14 +177,11 @@ Portfolio Buttons
   }
   
   .portfolio-item {
-	width:48%;
-    padding-bottom:48%;
-    margin:1%;
+	width:100%;
+    padding-bottom:75%;
     overflow:hidden;
     position:relative;
     float:left;
-	position: relative;
-	margin: 2%;
 	overflow: hidden;
 	max-width: 100%;
 	
@@ -258,36 +204,67 @@ Portfolio Buttons
 		-webkit-transform: scale(1.1);
 		transform: scale(1.1);
 	  }
-	  /* 
-	  by default, overlay is visible… 
-	  */
-	  .portfolio-item-overlay.top {
-		top: 100%;
-	  }
-	  &:hover .portfolio-item-overlay.top 
-	  {
-		cursor: pointer;
-		top: 0;
-		background-color: rgba(155, 70, 70, 0.5);
-	  }
+	  &:hover{
+		  .portfolio-item-overlay.top
+		  {
+			cursor: pointer;
+			background-color: rgba(189, 139, 209, 0.8);
+		  }
+		  .portfolio-item-overlay>div{
+			@include transform(translateY(0) scale(1));
+			@include transform(translateY(-50%));
+			visibility: visible;
+			opacity: 1;
+		  }
+	  } 
   }
-  .portfolio-item-overlay.top 
+  .porfolio-item-holder{
+		padding: 2em 0;
+	  @include MQ(M) {
+		padding: 0;
+	}
+  }
+  .portfolio-item-overlay
   {
+	background-color: rgba(189, 139, 209, 0);
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
-	background-color: rgba(0, 0, 0, 0);
 	color: #fff;
 	overflow: hidden;
 	text-align: center;
 	width: 100%; 
 	
-	-moz-transition: background-color 0.5s;
-	-webkit-transition: background-color 0.5s;
-	transition: background-color 0.5s;
-  }
+	-moz-transition: background-color 1s;
+	-webkit-transition: background-color 1s;
+	transition: background-color 1s;
+	}
+	a.portfolio-item-overlay{
+		font-weight: 700;
+		font-family: $secondary-font;
+		padding: 65% 0% 0 10%;
+		text-align: left;
+		text-transform: uppercase;
+		font-size: 1.2em;
+	}
+	.portfolio-item-overlay>div{
+		padding: 0.5em;
+		@include MQ(S){
+			padding: 1em;
+		}
+		opacity: 0;
+		visibility: hidden;
+		position: relative;
+		top: 50%;
+		-webkit-transition: all 0.4s ease-out 0.3s; 
+		transition: all 0.4s ease-out 0.3s; 
+		& h2, & h3, & p{
+			color: $color-5;
+		}
+	}
+
 /* -------------------------------- 
 
-Background Information
+xBackground Information
 
 -------------------------------- */
 .col-education{
@@ -305,7 +282,9 @@ Background Information
 xButtons 
 
 -------------------------------- */
-
+.in-text{
+	color: $color-1;
+}
 .btn {
 	border: none;
 	box-shadow: none;
@@ -364,17 +343,6 @@ xButtons
 	color: $color-1;
 }
 
-/* -------------------------------- 
-
-xIcons 
-
--------------------------------- */
-
-.cd-icons li {
-	/* icons size */
-	width: 32px;
-	height: 32px;
-}
 
 /* -------------------------------- 
 
