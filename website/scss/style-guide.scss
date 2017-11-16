@@ -4,14 +4,17 @@
 
 // color palette - these colors will be the color swatches of the Colors section
 
-$color-1: #6889c2; // Cornflower Blue - Action color
-$color-2: #49494d; // Dark gray
+
+$color-primary: #6889c2; // Cornflower Blue - Action color
+$color-secondary: #49494d; // Dark gray
 $color-3: #f79b4b; // orange
 $color-4: #e6e6e6; // light gray
 $color-5: #ffffff; // white
 $color-6: #7b7b81;
 $color-6: #7b7b81;
 $color-7: #3a4d6e;
+$color-1: #f9be5e;
+$color-2: #ff4046;
 // additional colors
 $success: #80b160; // green
 $alert: $color-3;  // red
@@ -21,6 +24,7 @@ $alert: $color-3;  // red
 $primary-font: 'Helvetica Neue', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
 $tertiary-font: 'Barlow Condensed', 'Open Sans', sans-serif;
+$code-font: 'Ubuntu', 'Open Sans', sans-serif;
 
 /* -------------------------------- 
 
@@ -32,7 +36,11 @@ body {
 	/* this is the page background */
 	background-color: $color-5;
 }
-
+.container.project section{
+	max-width: 60em;
+	margin: auto;
+	margin-top: 3em;
+}
 /* -------------------------------- 
 
 xPage title 
@@ -40,7 +48,7 @@ xPage title
 -------------------------------- */
 
 main > h1 {
-	color: $color-1;
+	color: $color-primary;
 	text-align: left;
 }
 
@@ -101,10 +109,10 @@ h2 {
 p {
 	font-size: 1.5rem;
 	line-height: 1.8;
-	color: lighten($color-2, 25%);
+	color: lighten($color-secondary, 25%);
 
 	a {
-		color: $color-1;
+		color: $color-primary;
 		text-decoration: underline;
 	}
 
@@ -157,11 +165,34 @@ xPortfolio
 			line-height: 1;
 		}
 	}
+	&.overlay-anchor{
+		top: 0.5em;
+		left: 0.5em;
+		@include MQ(S) {
+			top: 1em;
+			left: 1em;
+		}
+		@include MQ(M) {
+			top: 2em;
+			left: 2em;
+		}
+		&:hover{
+			font-weight: 700;
+			border-bottom: 2px solid white;
+		}
+	}
+	.in-text{
+		color: rgb(255, 255, 255);
+	}
 }
 .grayout{
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	filter: gray;
+}
+video {
+	width: 100%    !important;
+	height: auto   !important;
 }
 /* -------------------------------- 
 
@@ -208,8 +239,16 @@ xPortfolio Buttons
 		  .portfolio-item-overlay.top
 		  {
 			cursor: pointer;
+			
+		  }
+		  .portfolio-item-overlay.alice
+		  {
 			background-color: rgba(189, 139, 209, 0.8);
 		  }
+		  .portfolio-item-overlay.tamadoggy
+		  {
+			background-color: rgba(241, 162, 58, 0.8);
+		  }		  
 		  .portfolio-item-overlay>div{
 			@include transform(translateY(0) scale(1));
 			@include transform(translateY(-50%));
@@ -283,7 +322,7 @@ xButtons
 
 -------------------------------- */
 .in-text{
-	color: $color-1;
+	color: $color-primary;
 }
 .btn {
 	border: none;
@@ -296,14 +335,14 @@ xButtons
 	color: $color-5;
 	padding: .6em 2.2em;
 	cursor: pointer;
-	background: $color-1;
+	background: $color-primary;
 
 	&:focus {
 		outline: none;
 	}
 
 	.no-touch &:hover {
-		background: lighten($color-1, 5%);
+		background: lighten($color-primary, 5%);
 	}
 
 	&.btn-success {
@@ -323,13 +362,13 @@ xButtons
 	}
 
 	&.btn-outline {
-		color: $color-1;
+		color: $color-primary;
 		background: transparent;
-		box-shadow: inset 0 0 0 1px $color-1;
+		box-shadow: inset 0 0 0 1px $color-primary;
 
 		.no-touch &:hover {
 			color: $color-5;
-			background: $color-1;
+			background: $color-primary;
 		}
 	}
 
@@ -340,7 +379,7 @@ xButtons
 
 .cd-buttons .cd-box:nth-of-type(2) span {
 	/* CSS class name color */ 
-	color: $color-1;
+	color: $color-primary;
 }
 
 
@@ -375,8 +414,8 @@ input[type=text] {
 	}
 
 	&:focus {
-		border-color: $color-1;
-		box-shadow: 0 0 6px rgba($color-1, .2);
+		border-color: $color-primary;
+		box-shadow: 0 0 6px rgba($color-primary, .2);
 	}
 }
 
@@ -430,7 +469,7 @@ input[type=checkbox] {
 
 input[type=radio]:checked + label::before,
 input[type=checkbox]:checked + label::before {
-	background-color: $color-2;
+	background-color: $color-secondary;
 	border: none;
 	box-shadow: none;
 }
@@ -461,4 +500,6 @@ select {
 	cursor: pointer;
 	@include appearance(none);
 }
+
+.prettyprint{background:#fff;font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0!important}.pln{color:#4d4d4c}ol.linenums{margin-top:0;margin-bottom:0;color:#8e908c}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1em;background-color:#fff;list-style-type:decimal}@media screen{.str{color:#718c00}.kwd{color:#8959a8}.com{color:#8e908c}.typ{color:#4271ae}.lit{color:#f5871f}.pun{color:#4d4d4c}.opn{color:#4d4d4c}.clo{color:#4d4d4c}.tag{color:#c82829}.atn{color:#f5871f}.atv{color:#3e999f}.dec{color:#f5871f}.var{color:#c82829}.fun{color:#4271ae}}
 @import '../partials/basic-style';

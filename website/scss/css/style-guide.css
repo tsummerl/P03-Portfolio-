@@ -116,11 +116,31 @@ xPortfolio
       .background-overlay p.mini-bio {
         font-size: 1.4em;
         line-height: 1; } }
+  .background-overlay.overlay-anchor {
+    top: 0.5em;
+    left: 0.5em; }
+    @media only screen and (min-width: 48em) {
+      .background-overlay.overlay-anchor {
+        top: 1em;
+        left: 1em; } }
+    @media only screen and (min-width: 62em) {
+      .background-overlay.overlay-anchor {
+        top: 2em;
+        left: 2em; } }
+    .background-overlay.overlay-anchor:hover {
+      font-weight: 700;
+      border-bottom: 2px solid white; }
+  .background-overlay .in-text {
+    color: white; }
 
 .grayout {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: gray; }
+
+video {
+  width: 100%    !important;
+  height: auto   !important; }
 
 /* -------------------------------- 
 
