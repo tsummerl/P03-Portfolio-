@@ -35,6 +35,9 @@ h1 > span {
   text-transform: uppercase;
   color: #7b7b81;
   font-size: 1.2em; }
+  .mini-bio.main-page {
+    font-size: 1.5em;
+    color: #6889c2; }
 
 h3 {
   font-family: "Open Sans", sans-serif;
@@ -147,6 +150,16 @@ video {
   width: 100%    !important;
   height: auto   !important; }
 
+figcaption {
+  font: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  color: #f79b4b; }
+  figcaption strong {
+    font-weight: 600; }
+
+.code {
+  overflow: scroll; }
+
 /* -------------------------------- 
 
 xPortfolio Buttons
@@ -245,6 +258,7 @@ a.portfolio-item-overlay {
     .portfolio-item-overlay > div {
       padding: 1em; } }
   .portfolio-item-overlay > div h2, .portfolio-item-overlay > div h3, .portfolio-item-overlay > div p {
+    text-transform: uppercase;
     color: #ffffff; }
 
 /* -------------------------------- 
@@ -259,6 +273,14 @@ xBackground Information
     .col-education {
       border-top: 0.1em solid #e6e6e6;
       padding-top: 2em; } }
+
+/* -------------------------------- 
+
+xPadding basics
+
+-------------------------------- */
+.padding-small {
+  padding-top: 1.5em; }
 
 /* -------------------------------- 
 
@@ -824,17 +846,17 @@ section {
   display: block;
   padding: .6em 0; }
 .cd-colors li:nth-of-type(1) .cd-color-swatch {
-  background: #f9be5e; }
+  background: #6889c2; }
   .cd-colors li:nth-of-type(1) .cd-color-swatch::before {
-    background: #fac877; }
+    background: #7a97c9; }
   .cd-colors li:nth-of-type(1) .cd-color-swatch::after {
-    background: #f8b445; }
+    background: #567bbb; }
 .cd-colors li:nth-of-type(2) .cd-color-swatch {
-  background: #ff4046; }
+  background: #49494d; }
   .cd-colors li:nth-of-type(2) .cd-color-swatch::before {
-    background: #ff5a5f; }
+    background: #55555a; }
   .cd-colors li:nth-of-type(2) .cd-color-swatch::after {
-    background: #ff272d; }
+    background: #3d3d40; }
 .cd-colors li:nth-of-type(3) .cd-color-swatch {
   background: #f79b4b; }
   .cd-colors li:nth-of-type(3) .cd-color-swatch::before {
@@ -878,7 +900,7 @@ section {
 /* xTypography section - basic style */
 .cd-typography h1::before {
   content: 'Aa - ';
-  color: #f9be5e; }
+  color: #6889c2; }
 
 .cd-buttons .cd-box:first-of-type {
   border-bottom-left-radius: 0;

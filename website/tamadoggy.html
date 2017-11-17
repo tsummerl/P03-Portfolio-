@@ -27,22 +27,21 @@
             <img src="assets/portfolio/tamadoggy-background.png" alt="Project: Inanimate Alice">
         </div>
 		<section id="background">
-			<div class="row top-xs">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>Background</h2>
-                    <p>Tamadoggy is a single player dog simulation game.  The purpose of which is to take care of a virtual pet dog. It is a native android application, coded with Android Studio using Java.</p>
-				</div>
-			</div>
-        </section>
-        <section id="solution">
             <div class="row top-xs">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>Problem</h2>
-                    <p>The app begun as a individual course project.  Using the ever popular tamagotchi game as inspiration, I wanted to create a fun yet casual real time app that would engage users to continue playing </p>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div>
+                        <h2>Background</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <div>
+                        <p>Tamadoggy is a single player dog simulation game.  The purpose of which is to take care of a virtual pet dog. It is a native android application, coded with Android Studio using Java.</p>
+                        <p>The app begun as a individual course project.  Using the ever popular tamagotchi game as inspiration, I wanted to create a fun yet casual real time app that would engage users to continue playing.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="solution">
+        <section id="process">
             <div class="row top-xs">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="row">
@@ -50,65 +49,63 @@
                             <h2>Process</h2>
                         </div>
                     </div>
-                    <div class="row top-xs">
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                <img src="assets/portfolio/tamadoggy-mobile1.png" alt="Inanimate Alice ideation phase">
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                <img src="assets/portfolio/tamadoggy-mobile2.png" alt="Inanimate tamadoggy ideation phase">
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                <img src="assets/portfolio/tamadoggy-mobile3.png" alt="Inanimate tamadoggy ideation phase">
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                <img src="assets/portfolio/tamadoggy-mobile4.png" alt="Inanimate tamadoggy ideation phase">
-                        </div>
+                    <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <figure class="row top-xs">
+                            <div class="padding-small col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                    <img src="assets/portfolio/tamadoggy-mobile1.png" alt="Inanimate Alice ideation phase">
+                            </div>
+                            <div class="padding-small col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                    <img src="assets/portfolio/tamadoggy-mobile2.png" alt="Inanimate tamadoggy ideation phase">
+                            </div>
+                            <div class="padding-small col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                    <img src="assets/portfolio/tamadoggy-mobile3.png" alt="Inanimate tamadoggy ideation phase">
+                            </div>
+                            <div class="padding-small col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                    <img src="assets/portfolio/tamadoggy-mobile4.png" alt="Inanimate tamadoggy ideation phase">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <figcaption><strong>Fig. 1 </strong>Intial mockups of Tamadoggy</figcaption>
+                            </div>
+                        </figure>
                     </div>
-                    <section id="colors" class="cd-colors">
-                        <ul>
-                            <li class="cd-box">
-                                <div class="cd-color-swatch"></div>
-                            </li>
-            
-                            <li class="cd-box">
-                                <div class="cd-color-swatch"></div>
-                            </li>
-                        </ul>
-                    </section>
-                    <p> Initially I started off brainstorming ideas for the app that would fit course requirements but still be a fun piece.  I then went on to define features I would like to see in the game, sorting them into basic, standard and advanced functionality.  After, I planned out the site map of the app, and the database structure I would require for the basic functionality.  When coding the app, I had to research and learn many different coding techniques since Tamadoggy is the first native android application I have worked on. I wanted to keep the UI simple, fun and friendly without being too childish. With that in mind, I chose a more rounded font as well as a bright and warm colour scheme.</p>
+                    <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <p class="padding-small"> Initially I started off brainstorming ideas for the app that would fit course requirements but still be a fun and standalone as a game.  I then went on to define features I would like to see in the game, sorting them into basic, standard and advanced functionality.  After, I planned out the site map of the app, and the database structure I would require for the basic functionality.  When coding the app, I had to research and learn many different coding techniques since Tamadoggy is the first native android application I have worked on. I wanted to keep the UI simple, fun and friendly without being too childish. With that in mind, I chose a more rounded font as well as a bright and warm colour scheme.</p>
+                    </div>
                     <div class="row top-xs">
-                        <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="code col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
                             <pre class="prettyprint"><code class="language-java prettyprint">
-    private int calculateStatValue() {
-        Date currDate = new Date();
-        long timeDiff = currDate.getTime() - lastDate.getTime();
-        int intTimeDiff = (int) TimeUnit.MILLISECONDS.toMinutes(timeDiff);
-        if (intTimeDiff >= 60) {
-            valHunger = valHunger - (2 * (intTimeDiff / 60));
-            valFun = valFun - (3 * (intTimeDiff / 60));
-            valFitness = valFitness - (2 * (intTimeDiff / 60));
-            valHygiene = valHygiene - (1 * (intTimeDiff / 60));
-
-            lastDate = new Date(lastDate.getTime() + TimeUnit.HOURS.toMillis(intTimeDiff / 60));
-        }
-        return 59 - (intTimeDiff % 60); //remaining time until next update;
+private int calculateStatValue() {
+    Date currDate = new Date();
+    long timeDiff = currDate.getTime() - lastDate.getTime();
+    int intTimeDiff = (int) TimeUnit.MILLISECONDS.toMinutes(timeDiff);
+    if (intTimeDiff >= 60) {
+        valHunger = valHunger - (2 * (intTimeDiff / 60));
+        valFun = valFun - (3 * (intTimeDiff / 60));
+        valFitness = valFitness - (2 * (intTimeDiff / 60));
+        valHygiene = valHygiene - (1 * (intTimeDiff / 60));
+        
+        lastDate = new Date(lastDate.getTime() + TimeUnit.HOURS.toMillis(intTimeDiff / 60));
     }
+    return 59 - (intTimeDiff % 60); //remaining time until next update;
+}
                             </code></pre>
-                    </div> -->
-                </div>
-                <div class="row top-xs">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <img src="assets/portfolio/tamadoggy-2.png" alt="Inanimate Alice ideation phase">
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <img src="assets/portfolio/tamadoggy-1.png" alt="Inanimate Alice ideation phase">
+                    <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="row top-xs">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <img src="assets/portfolio/tamadoggy-2.png" alt="Inanimate Alice ideation phase">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <img src="assets/portfolio/tamadoggy-1.png" alt="Inanimate Alice ideation phase">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-	</main>
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> 
-</body>
-</html>
+            </section>
+        </main>
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/main.js"></script> <!-- Resource jQuery -->
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> 
+    </body>
+    </html>

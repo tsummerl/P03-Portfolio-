@@ -5,16 +5,18 @@
 // color palette - these colors will be the color swatches of the Colors section
 
 
+$color-1: #f9be5e;
+$color-2: #ff4046;
 $color-primary: #6889c2; // Cornflower Blue - Action color
 $color-secondary: #49494d; // Dark gray
 $color-3: #f79b4b; // orange
 $color-4: #e6e6e6; // light gray
 $color-5: #ffffff; // white
 $color-6: #7b7b81;
-$color-6: #7b7b81;
 $color-7: #3a4d6e;
-$color-1: #f9be5e;
-$color-2: #ff4046;
+
+$color-alice: rgba(189, 139, 209, 0.8);
+$color-tamadoggy: rgba(241, 162, 58, 0.8);
 // additional colors
 $success: #80b160; // green
 $alert: $color-3;  // red
@@ -66,6 +68,10 @@ h1 > span{
 	text-transform: uppercase;
 	color: $color-6;
 	font-size: 1.2em;
+	&.main-page{
+		font-size: 1.5em;
+		color:$color-primary;
+	}
 }
 h3{
 	font-family: $secondary-font;
@@ -194,6 +200,17 @@ video {
 	width: 100%    !important;
 	height: auto   !important;
 }
+figcaption{
+	font: $secondary-font;
+	font-size: 0.9em;
+	color: $color-3;
+	& strong{
+		font-weight: 600;
+	}
+}
+.code{
+	overflow: scroll;
+}
 /* -------------------------------- 
 
 xPortfolio Buttons
@@ -297,6 +314,7 @@ xPortfolio Buttons
 		-webkit-transition: all 0.4s ease-out 0.3s; 
 		transition: all 0.4s ease-out 0.3s; 
 		& h2, & h3, & p{
+			text-transform: uppercase;
 			color: $color-5;
 		}
 	}
@@ -315,6 +333,14 @@ xBackground Information
 	}
 }
 
+/* -------------------------------- 
+
+xPadding basics
+
+-------------------------------- */
+.padding-small{
+	padding-top: 1.5em;
+}
 
 /* -------------------------------- 
 
