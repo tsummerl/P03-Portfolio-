@@ -7,3 +7,10 @@ AddOutputFilterByType DEFLATE text/css
 AddOutputFilterByType DEFLATE application/javascript
 
 </IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access 1 day"
+ExpiresByType text/css "acess 1 week"
+ExpiresByType image/jpg "access 1 month"
+</IfModule>

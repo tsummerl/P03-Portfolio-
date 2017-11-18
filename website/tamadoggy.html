@@ -69,7 +69,7 @@
                         </figure>
                     </div>
                     <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                        <p class="padding-small"> Initially I started off brainstorming ideas for the app that would fit course requirements but still be a fun and standalone as a game.  I then went on to define features I would like to see in the game, sorting them into basic, standard and advanced functionality.  After, I planned out the site map of the app, and the database structure I would require for the basic functionality.  When coding the app, I had to research and learn many different coding techniques since Tamadoggy is the first native android application I have worked on. I wanted to keep the UI simple, fun and friendly without being too childish. With that in mind, I chose a more rounded font as well as a bright and warm colour scheme.</p>
+                        <p class="padding-small"> Initially I started off brainstorming ideas for the app that would fit course requirements but still be a fun and standalone as a game.  I then went on to define features I would like to see in the game, sorting them into basic, standard and advanced functionality.  After, I planned out the site map of the app, and the database structure I would require for the basic functionality.  When coding the app, I had to research and learn many different coding techniques since Tamadoggy is the first native android application I have worked on. One of the issues I faced was establishing a continual degragation of stats, even when the player wasn't using the app.  To solve this issue I created a time stamp for when the degration of stats should occur.  Once the application degrates the stats it updates the time stamp accordingly.</p>
                     </div>
                     <div class="row top-xs">
                         <div class="code col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
@@ -89,6 +89,20 @@ private int calculateStatValue() {
     return 59 - (intTimeDiff % 60); //remaining time until next update;
 }
                             </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ui">
+                <div class="row top-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div>
+                            <h2>UI/UX</h2>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div>
+                            <p>I wanted to keep the UI simple, fun and friendly without being too childish. With that in mind, I chose a more rounded font as well as a bright and warm colour scheme. For my primary colour I choose a warm orange colour and for the secondary colour I choose a vibrant pink.  I choose sans-serif fonts for readibility.</p>
                         </div>
                     </div>
                     <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
