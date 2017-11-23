@@ -14,26 +14,18 @@ html * {
 }
 nav, .container{
 	padding: 0 1em;
-	&.main-page{
-		padding-top: 100px; //for header;
-	}
+	padding-top: 100px; //for header;
 	@include MQ(S) {
 		padding: 0 2em;
-		&.main-page{
-			padding-top: 100px; //for header;
-		}
+		padding-top: 100px; //for header;
 	}
 	@include MQ(M) {
 		padding: 0 4em;
-		&.main-page{
-			padding-top: 100px; //for header;
-		}
+		padding-top: 100px; //for header;
 	}
 	@include MQ(L) {
 		padding: 0 8em;
-		&.main-page{
-			padding-top: 100px; //for header;
-		}
+		padding-top: 100px; //for header;
 	}
 }
 html {

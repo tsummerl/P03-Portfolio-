@@ -597,24 +597,20 @@ html * {
   -moz-osx-font-smoothing: grayscale; }
 
 nav, .container {
-  padding: 0 1em; }
-  nav.main-page, .container.main-page {
-    padding-top: 100px; }
+  padding: 0 1em;
+  padding-top: 100px; }
   @media only screen and (min-width: 48em) {
     nav, .container {
-      padding: 0 2em; }
-      nav.main-page, .container.main-page {
-        padding-top: 100px; } }
+      padding: 0 2em;
+      padding-top: 100px; } }
   @media only screen and (min-width: 62em) {
     nav, .container {
-      padding: 0 4em; }
-      nav.main-page, .container.main-page {
-        padding-top: 100px; } }
+      padding: 0 4em;
+      padding-top: 100px; } }
   @media only screen and (min-width: 75em) {
     nav, .container {
-      padding: 0 8em; }
-      nav.main-page, .container.main-page {
-        padding-top: 100px; } }
+      padding: 0 8em;
+      padding-top: 100px; } }
 
 html {
   font-size: 62.5%; }
