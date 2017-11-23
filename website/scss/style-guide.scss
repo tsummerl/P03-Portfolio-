@@ -151,17 +151,36 @@ xNav Style
 	color: $color-3;
 	font-weight: 700;
 	font-family: $tertiary-font;
-	font-size: 3rem;
+	font-size: 2.5rem;
+	@include MQ(S) {
+		font-size: 3rem;
+	}
+
+	@include MQ(M) {
+		font-size: 3.5rem;
+	}
 }
 .header-links{
 	div{
 		display: inline-block;
-		padding-right: 2em;
+		padding-right: 0.5em;
+		@include MQ(S) {
+			padding-right: 2em;
+		}
+	
+		@include MQ(M) {
+			padding-right: 2em;
+		}
 	}
 	.in-text{
-		padding: 10px;
+		padding: 9px 5px;
 		font-family: $secondary-font;
 		text-shadow: none;
+		font-size: .8em;
+		@include MQ(S) {
+			font-size: 1em;
+			padding: 10px;
+		}
 	}
 	a::before,
 	a::after {

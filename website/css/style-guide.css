@@ -107,15 +107,32 @@ xNav Style
   color: #f79b4b;
   font-weight: 700;
   font-family: "Barlow Condensed", "Open Sans", sans-serif;
-  font-size: 3rem; }
+  font-size: 2.5rem; }
+  @media only screen and (min-width: 48em) {
+    .nav-fontDisplay {
+      font-size: 3rem; } }
+  @media only screen and (min-width: 62em) {
+    .nav-fontDisplay {
+      font-size: 3.5rem; } }
 
 .header-links div {
   display: inline-block;
-  padding-right: 2em; }
+  padding-right: 0.5em; }
+  @media only screen and (min-width: 48em) {
+    .header-links div {
+      padding-right: 2em; } }
+  @media only screen and (min-width: 62em) {
+    .header-links div {
+      padding-right: 2em; } }
 .header-links .in-text {
-  padding: 10px;
+  padding: 9px 5px;
   font-family: "Open Sans", sans-serif;
-  text-shadow: none; }
+  text-shadow: none;
+  font-size: .8em; }
+  @media only screen and (min-width: 48em) {
+    .header-links .in-text {
+      font-size: 1em;
+      padding: 10px; } }
 .header-links a::before,
 .header-links a::after {
   position: absolute;
