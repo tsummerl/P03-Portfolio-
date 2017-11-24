@@ -54,7 +54,23 @@ main > h1 {
 	color: $color-primary;
 	text-align: left;
 }
-
+.intro{
+	background-color: rgb(241, 236, 231);
+	opacity: 0.75;
+	height: 30em;
+	position: relative;
+}
+.profile-pic{
+	position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+	margin: auto;
+	min-width: 100px !important;
+	min-height: 100px !important;
+	max-height: 50px !important;
+	max-width: 50px !important;
+}
 /* -------------------------------- 
 
 xTypography 
@@ -62,8 +78,11 @@ xTypography
 -------------------------------- */
 h1 > span{
 	text-transform: uppercase;
-	color: $color-3;
+	color: $color-5;
 	font-weight: 700;
+	&.main-page{
+		color: $color-3 !important;
+	}
 }
 
 .mini-bio{
@@ -72,7 +91,7 @@ h1 > span{
 	font-size: 1.2em;
 	&.main-page{
 		font-size: 1.5em;
-		color:$color-primary;
+		color:$color-primary !important;
 	}
 }
 h3{
