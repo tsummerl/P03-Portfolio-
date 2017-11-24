@@ -22,6 +22,23 @@ main > h1 {
   color: #6889c2;
   text-align: left; }
 
+.intro {
+  background-color: #f1ece7;
+  opacity: 0.75;
+  height: 30em;
+  position: relative; }
+
+.profile-pic {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  margin: auto;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-height: 50px !important;
+  max-width: 50px !important; }
+
 /* -------------------------------- 
 
 xTypography 
@@ -29,8 +46,10 @@ xTypography
 -------------------------------- */
 h1 > span {
   text-transform: uppercase;
-  color: #f79b4b;
+  color: #ffffff;
   font-weight: 700; }
+  h1 > span.main-page {
+    color: #f79b4b !important; }
 
 .mini-bio {
   text-transform: uppercase;
@@ -38,7 +57,7 @@ h1 > span {
   font-size: 1.2em; }
   .mini-bio.main-page {
     font-size: 1.5em;
-    color: #6889c2; }
+    color: #6889c2 !important; }
 
 h3 {
   font-family: "Open Sans", sans-serif;
@@ -614,9 +633,14 @@ nav, .container {
       padding-top: 100px; } }
 
 html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
   font-size: 62.5%; }
 
 body {
+  width: 100%;
   font-size: 1.6rem;
   font-family: "Helvetica Neue", sans-serif; }
 
