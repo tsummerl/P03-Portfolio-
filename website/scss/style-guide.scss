@@ -55,8 +55,7 @@ main > h1 {
 	text-align: left;
 }
 .intro{
-	background-color: rgb(241, 236, 231);
-	opacity: 0.75;
+	background-color: $color-4;
 	height: 30em;
 	position: relative;
 }
@@ -76,11 +75,12 @@ main > h1 {
 xTypography 
 
 -------------------------------- */
-h1 > span{
+h1{
 	text-transform: uppercase;
 	color: $color-5;
 	font-weight: 700;
-	&.main-page{
+	&.main-page,
+	.main-page{
 		color: $color-3 !important;
 	}
 }
@@ -96,10 +96,10 @@ h1 > span{
 }
 h3{
 	font-family: $secondary-font;
-	color: $color-3;
+	color: $color-primary;
 	font-weight: 600;
-	text-transform: uppercase;
-	padding-bottom: 1em;
+	font-size: 1.1em;
+	padding-bottom: 0.1em;
 	display: inline-block;
 }
 h1 {
@@ -329,6 +329,10 @@ figcaption{
 	}
 }
 .code{
+	margin-top: 1em;
+	padding: 0.25em 1em;
+	border: 2px solid $color-4;
+	border-radius: 0.2em;
 	overflow: scroll;
 }
 /* -------------------------------- 
@@ -367,12 +371,12 @@ xPortfolio Buttons
 		top:0%;
 		left:0
 	  }
-	  &:hover img {
+	  & img {
 		-moz-transform: scale(1.1);
 		-webkit-transform: scale(1.1);
 		transform: scale(1.1);
 	  }
-	  &:hover{
+	  &{
 		  .portfolio-item-overlay.top
 		  {
 			cursor: pointer;
@@ -392,7 +396,32 @@ xPortfolio Buttons
 			visibility: visible;
 			opacity: 1;
 		  }
-	  } 
+	  }
+	  &:hover img {
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	  }
+	  &:hover{
+		  .portfolio-item-overlay.top
+		  {
+			cursor: pointer;
+		  }
+		  .portfolio-item-overlay.alice
+		  {
+			background-color: rgba(189, 139, 209, 0);
+		  }
+		  .portfolio-item-overlay.tamadoggy
+		  {
+			background-color: rgba(241, 162, 58, 0);
+		  }		  
+		  .portfolio-item-overlay>div{
+			@include transform(translateY(0) scale(1));
+			@include transform(translateY(50%));
+			visibility: visible;
+			opacity: 0;
+		  }
+	  }
   }
   .porfolio-item-holder{
 		padding: 2em 0;
@@ -470,182 +499,19 @@ xButtons
 .in-text{
 	color: $color-secondary;
 }
-.btn {
-	border: none;
-	box-shadow: none;
-	border-radius: .25em;
-	font: {
-		size: 1.4rem;
-		family: $secondary-font;
-	}
-	color: $color-5;
-	padding: .6em 2.2em;
-	cursor: pointer;
-	background: $color-primary;
-
-	&:focus {
-		outline: none;
-	}
-
-	.no-touch &:hover {
-		background: lighten($color-primary, 5%);
-	}
-
-	&.btn-success {
-		background: $success;
-
-		.no-touch &:hover {
-			background: lighten($success, 5%);
-		}
-	}
-
-	&.btn-alert {
-		background: $alert;
-
-		.no-touch &:hover {
-			background: lighten($alert, 5%);
-		}
-	}
-
-	&.btn-outline {
-		color: $color-primary;
-		background: transparent;
-		box-shadow: inset 0 0 0 1px $color-primary;
-
-		.no-touch &:hover {
-			color: $color-5;
-			background: $color-primary;
-		}
-	}
-
-	@include MQ(S) {
-		font-size: 1.6rem;
-	}
-}
-
-.cd-buttons .cd-box:nth-of-type(2) span {
-	/* CSS class name color */ 
-	color: $color-primary;
-}
 
 
 /* -------------------------------- 
 
-xForm 
+xStyle Guide
 
 -------------------------------- */
 
-input[type=text], select {
-	border: 1px solid $color-4;
-	border-radius: .25em;
-	background: $color-5;
-
-	&:focus {
-		outline: none;
-	}
+.grid-sample{
+	background-color: $color-4;
+	height: 5em;
+	border-radius: 1em;
 }
-
-input[type=text] {
-	padding: .6em 1em;
-	box-shadow: inset 1px 1px rgba(#000, .03);
-
-	&.success {
-		border-color: $success;
-		box-shadow: 0 0 6px rgba($success, .2);
-	}
-
-	&.alert {
-		border-color: $alert;
-		box-shadow: 0 0 6px rgba($alert, .2);
-	}
-
-	&:focus {
-		border-color: $color-primary;
-		box-shadow: 0 0 6px rgba($color-primary, .2);
-	}
-}
-
-input[type=radio],
-input[type=checkbox] {
-	position: absolute;
-	left: 0;
-	top: 0;
-	margin: 0;
-	padding: 0;
-	opacity: 0;
-}
-
-.radio-label,
-.checkbox-label {
-	padding-left: 24px;
-	@include user-select(none);
-
-	&::before,
-	&::after {
-		/* custom radio and check boxes */
-		content: '';
-		display: block;
-		width: 16px;
-		height: 16px;
-		position: absolute;
-		top: 50%;
-		@include transform(translateY(-50%));
-	}
-
-	&::before {
-		left: 0;
-		border: 1px solid $color-4;
-		box-shadow: inset 1px 1px rgba(#000, .03);
-	}
-
-	&::after {
-		left: 3px;
-		background: url('../assets/form/icon-check.svg') no-repeat center center;
-		display: none;
-	}
-}
-
-.radio-label::before {
-	border-radius: 50%;
-}
-
-.checkbox-label::before {
-	border-radius: 3px;
-}
-
-input[type=radio]:checked + label::before,
-input[type=checkbox]:checked + label::before {
-	background-color: $color-secondary;
-	border: none;
-	box-shadow: none;
-}
-
-input[type=radio]:checked + label::after,
-input[type=checkbox]:checked + label::after {
-	display: block;
-}
-
-.cd-select::after {
-	/* switcher arrow for select element */
-	content: '';
-	position: absolute;
-	z-index: 1;
-	right: 14px;
-	top: 50%;
-	@include transform(translateY(-50%));
-	display: block;
-	width: 16px;
-	height: 16px;
-	background: url('../assets/form/icon-select.svg') no-repeat center center;
-	pointer-events: none;
-}
-
-select {
-	position: relative;
-	padding: .6em 2em .6em 1em;
-	cursor: pointer;
-	@include appearance(none);
-}
-
-.prettyprint{background:#fff;font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0!important}.pln{color:#4d4d4c}ol.linenums{margin-top:0;margin-bottom:0;color:#8e908c}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1em;background-color:#fff;list-style-type:decimal}@media screen{.str{color:#718c00}.kwd{color:#8959a8}.com{color:#8e908c}.typ{color:#4271ae}.lit{color:#f5871f}.pun{color:#4d4d4c}.opn{color:#4d4d4c}.clo{color:#4d4d4c}.tag{color:#c82829}.atn{color:#f5871f}.atv{color:#3e999f}.dec{color:#f5871f}.var{color:#c82829}.fun{color:#4271ae}}
+/*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
+.prettyprint{font-size:0.85em;background:#fff;font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0!important}.pln{color:#4d4d4c}ol.linenums{margin-top:0;margin-bottom:0;color:#8e908c}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1em;background-color:#fff;list-style-type:decimal}@media screen{.str{color:#718c00}.kwd{color:#8959a8}.com{color:#8e908c}.typ{color:#4271ae}.lit{color:#f5871f}.pun{color:#4d4d4c}.opn{color:#4d4d4c}.clo{color:#4d4d4c}.tag{color:#c82829}.atn{color:#f5871f}.atv{color:#3e999f}.dec{color:#f5871f}.var{color:#c82829}.fun{color:#4271ae}}
 @import '../partials/basic-style';

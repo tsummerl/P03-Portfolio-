@@ -65,7 +65,7 @@ header {
 	z-index: 10;
 
 	nav {
-		display: inline-block;
+		display: block;
 	}
 
 	@include MQ(M) {

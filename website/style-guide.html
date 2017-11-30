@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,900|Helvetica Neue|Ubuntu|Barlow+Condensed:500,600,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700|Open+Sans:400,600,700" rel="stylesheet">
 
 	<!-- <link rel="stylesheet" href="css/skeleton.css"> -->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
@@ -16,43 +15,97 @@
 </head>
 <body>
 	<header>
-		<nav class="row padding-small align-center main-nav">
-			<div class="col-xs-2 col-sm-4">
-				<a class="in-text active" href="index.html"><p class="nav-fontDisplay">TS</p></a>
+        <nav class="padding-small ">
+			<div class="row align-center main-nav">
+                <div class="col-xs-2 col-sm-4">
+                    <a class="in-text active" href="index.html"><p class="nav-fontDisplay">TS</p></a>
+                </div>
+                <div class="col-xs-10 col-sm-8 end-xs header-links">
+                    <div><a class="in-text" href="index.html">Home</a></div>
+                    <div><a class="in-text active" href="style-guide.html">Style Guide</a></div>
+                    <div><a class="in-text" href="#">Citations</a></div>
+                </div>
 			</div>
-			<div class="col-xs-10 col-sm-8 end-xs header-links">
-				<div><a class="in-text active" href="index.html">Home</a></div>
-				<div><a class="in-text" href="style-guide.html">Style Guide</a></div>
-				<div><a class="in-text" href="#">Citations</a></div>
+            </nav>
+        </header>
+        <main class="main-page container">
+            <div class="intro background-img">
+                <div class="background-overlay">
+                    <h1><span class="main-page" >Style Guide</span></h1>
+                    <p class="mini-bio main-page"> This is a style guide for Twilight Summerland's portfolio</p>
+                </div>
 			</div>
-		</nav>
-	</header>
-	<main class="main-page container">
-		<div class="intro background-img">
-			<div class="background-overlay">
-				<h1><span class="main-page" >Hi, I’m Twilight.</span></h1>
-				<p class="mini-bio main-page"> I’m 3 parts programmer, 1 part designer.</p>
-			</div>
-		</div>
-		<section id="education">
-			<div class="row top-xs">
-				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-					<div class="col-education">
-						<h2>Background</h2>
-					</div>
+            <section id="grid">
+                <div class="row top-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <h2>Grid System</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+						<h3>Grid - Main page content</h3>
+						<div class="row top-xs">
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 padding-small">
+								<div class="grid-sample">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding-small">
+								<div class="grid-sample">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding-small">
+								<div class="grid-sample">
+								</div>
+							</div>
+						</div>
+						<h3 class="padding-small">Grid - Project page content</h3>
+						<div class="row top-xs">
+							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 padding-small">
+								<div class="grid-sample"></div>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 padding-small">
+								<div class="grid-sample"></div>
+							</div>
+						</div>
+						<pre class="code"><code class="prettyprint">
+&lt;div class="row top-xs"&gt;
+	&lt;div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 padding-small"&gt;
+		&lt;div class="grid-sample"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding-small"&gt;
+		&lt;div class="grid-sample"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding-small"&gt;
+		&lt;div class="grid-sample"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row top-xs"&gt;
+	&lt;div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 padding-small"&gt;
+		&lt;div class="grid-sample"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 padding-small"&gt;
+		&lt;div class="grid-sample"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+						</code></pre>
+                    </div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<div class="col-education">
-						<p>Back in 2012, I started out my post secondary education at Simon Fraser University (SFU). Like most high school gradruates I went into the experience a little lost, making my way through by taking classes that sounded interesting or that I had been good at in highschool.  Eventually I stumbled onto computer science, which nurtured my interest in problem solving and critical thinking in a technical way.</p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<div class="col-education">
-						<p>I realized, as I continued pursuing my post-secondary degree, I wasn't only concerned about the efficiency of the applications that I was creating. I was also interested in creating great user experiences.  I eventually found my way into an Interactive Arts and Technology (IAT) minor.  IAT encouraged me to continue on with a user-centered mindset and brought my skills in front-end development to a higher level.</p>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
+            <section id="typography">
+                <div class="row top-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <h2>Typography</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+						<h1 class="main-page">Header 1</h1>
+						<p class="mini-bio main-page"> Sub information</p>
+                        <h2>Header 2</h2>
+						<h3>Header 3</h3>
+						<p>Paragraph example</p>
+                    </div>
+                </div>
+            </section>
 		<section id="projects">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-6">
@@ -95,7 +148,8 @@
 			</div>
 		</section>
 	</main>
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> 
 </body>
 </html>

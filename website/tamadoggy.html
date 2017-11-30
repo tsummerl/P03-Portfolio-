@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,900|Helvetica Neue|Ubuntu|Barlow+Condensed:500,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700|Open+Sans:400,600,700" rel="stylesheet">
 
 	<!-- <link rel="stylesheet" href="css/skeleton.css"> -->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
@@ -16,21 +15,23 @@
 </head>
 <body>
     <header>
-        <nav class="row padding-small align-center main-nav">
-            <div class="col-xs-2 col-sm-4">
-                <a class="in-text active" href="index.html"><p class="nav-fontDisplay">TS</p></a>
-            </div>
-            <div class="col-xs-10 col-sm-8 end-xs header-links">
-                <div><a class="in-text" href="index.html">Home</a></div>
-                <div><a class="in-text" href="style-guide.html">Style Guide</a></div>
-                <div><a class="in-text" href="#">Citations</a></div>
+        <nav class="padding-small ">
+            <div class="row align-center main-nav">
+                <div class="col-xs-2 col-sm-4">
+                    <a class="in-text active" href="index.html"><p class="nav-fontDisplay">TS</p></a>
+                </div>
+                <div class="col-xs-10 col-sm-8 end-xs header-links">
+                    <div><a class="in-text" href="index.html">Home</a></div>
+                    <div><a class="in-text" href="style-guide.html">Style Guide</a></div>
+                    <div><a class="in-text" href="#">Citations</a></div>
+                </div>
             </div>
         </nav>
     </header>
 	<main class="project container">
         <div class="background-img">        
             <div class="background-overlay">
-                <h1><span>Tamadoggy</span></h1>
+                <h1>Tamadoggy</h1>
                 <p class="mini-bio tamadoggy">Java, Android Studio, App Development, Game Development</p>
             </div>
             <!-- <div class="background-overlay overlay-anchor">
@@ -84,8 +85,8 @@
                         <p class="padding-small"> Initially I started off brainstorming ideas for the app that would fit course requirements but still be a fun and standalone as a game.  I then went on to define features I would like to see in the game, sorting them into basic, standard and advanced functionality.  After, I planned out the site map of the app, and the database structure I would require for the basic functionality.  When coding the app, I had to research and learn many different coding techniques since Tamadoggy is the first native android application I have worked on. <br>One of the issues I faced was establishing a continual degragation of stats, even when the player wasn't using the app.  To solve this issue I created a time stamp for when the degration of stats should occur. Stats degrate at an interval of once per hour, so when a user re-opens the app, we check how much time has passed since the last degration has occured. We update the stats based on how many hours have passed, and update the time stamp to when the last degration should have taken place.</p>
                     </div>
                     <div class="row top-xs">
-                        <div class="code col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                            <figure><pre class="prettyprint"><code class="language-java prettyprint">
+                        <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                            <figure><pre class="code"><code class="language-java prettyprint">
 private int calculateStatValue() {
     Date currDate = new Date();
     long timeDiff = currDate.getTime() - lastDate.getTime();
