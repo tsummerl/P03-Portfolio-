@@ -411,6 +411,19 @@ xBackground Information
 
 /* -------------------------------- 
 
+xCitations
+
+-------------------------------- */
+.citations strong {
+  color: #6889c2;
+  font-weight: 700; }
+.citations .citations {
+  padding: 2em 0; }
+  .citations .citations p {
+    padding-bottom: 0.5em; }
+
+/* -------------------------------- 
+
 xPadding basics
 
 -------------------------------- */
@@ -618,10 +631,6 @@ section {
     section {
       margin: 3em 0 5em; } }
 
-@-moz-document url-prefix() {
-  /* hide custom arrow on Firefox */
-  .cd-select::after {
-    display: none; } }
 .no-csstransitions .cd-select::after {
   display: none; }
 

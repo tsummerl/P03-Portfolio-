@@ -486,7 +486,24 @@ xBackground Information
 		padding-top: 2em; 
 	}
 }
+/* -------------------------------- 
 
+xCitations
+
+-------------------------------- */
+.citations{
+	strong{
+		color: $color-primary;
+		font-weight: 700;
+	  }
+	  .citations{
+		  p{
+			  padding-bottom: 0.5em;
+		  }
+		  padding: 2em 0;
+	  }
+
+}
 /* -------------------------------- 
 
 xPadding basics

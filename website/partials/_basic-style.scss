@@ -94,16 +94,6 @@ section {
 	}
 }
 
-
-
-
-@-moz-document url-prefix(){
-	/* hide custom arrow on Firefox */
-	.cd-select::after {
-		display: none;
-	}
-}
-
 .no-csstransitions .cd-select::after {
 	display: none;
 }
