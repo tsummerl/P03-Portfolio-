@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700%7COpen+Sans:400,600,700" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style-guide.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/main.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="css/flexboxgrid.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
@@ -75,9 +75,7 @@
                             <div class="padding-small col-xs-6 col-sm-3 col-md-3 col-lg-3">
                                     <img src="assets/portfolio/tamadoggy-mobile4.png" alt="Inanimate tamadoggy ideation phase">
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <figcaption><strong>Fig. 1 </strong>Intial mockups of Tamadoggy</figcaption>
-                            </div>
+                            <figcaption class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><strong>Fig. 1 </strong>Intial mockups of Tamadoggy</figcaption>
                         </figure>
                     </div>
                     <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
@@ -99,9 +97,10 @@ private int calculateStatValue() {
         lastDate = new Date(lastDate.getTime() + TimeUnit.HOURS.toMillis(intTimeDiff / 60));
     }
     return 59 - (intTimeDiff % 60); //remaining time until next update;
-                            </code></pre>
-                            <figcaption><strong>Fig. 2 </strong>Sample code to calculate the value of the stats</figcaption>
-                        </figure>
+                                </code></pre>
+                                <figcaption><strong>Fig. 2 </strong>Sample code to calculate the value of the stats</figcaption>
+                            </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,18 +118,14 @@ private int calculateStatValue() {
                         </div>
                     </div>
                     <div class="col-md-offset-3  col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                        <figure class="padding-small">
-                            <div class="row top-xs">
+                        <figure class="padding-small row top-xs">
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <img src="assets/portfolio/tamadoggy-2.png" alt="Tamadoggy UI, main stat screen">
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <img src="assets/portfolio/tamadoggy-1.png" alt="Tamadoggy UI, creating a dog">
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <figcaption><strong>Fig. 3 </strong>Screenshots of the Tamadoggy UI</figcaption>
-                                </div>
-                            </div>
+                                <figcaption class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><strong>Fig. 3 </strong>Screenshots of the Tamadoggy UI</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -158,8 +153,6 @@ private int calculateStatValue() {
                 </div>
             </footer>
         </main>
-        <script src="js/jquery-2.1.1.js"></script>
-        <script src="js/main.js"></script> <!-- Resource jQuery -->
         <script src="https://use.fontawesome.com/9da350f4cd.js"></script>
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> 
     </body>

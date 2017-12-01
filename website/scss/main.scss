@@ -73,6 +73,12 @@ main > h1 {
 xTypography 
 
 -------------------------------- */
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
 h1{
 	text-transform: uppercase;
 	color: $color-5;
@@ -492,6 +498,7 @@ xCitations
 
 -------------------------------- */
 .citations{
+	padding: 2em 0;
 	strong{
 		color: $color-primary;
 		font-weight: 700;
@@ -511,6 +518,28 @@ xPadding basics
 -------------------------------- */
 .padding-small{
 	padding-top: 1.5em;
+}
+
+/* -------------------------------- 
+
+xStyle Guide
+
+-------------------------------- */
+.colour-swatch{
+	width: 3em;
+	height: 3em;
+	display: inline-block;
+	&.orange{
+		background-color: $color-1;
+	}
+	&.blue{
+		background-color: $color-primary;
+		text-align: center;
+	}
+	&.gray{
+		background-color: $color-6;
+		text-align: right;
+	}
 }
 
 /* -------------------------------- 
