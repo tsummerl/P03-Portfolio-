@@ -16,6 +16,7 @@ $color-6: #7b7b81;
 $color-7: #8d939b;
 
 $color-alice: rgba(189, 139, 209, 0.8);
+$color-sample: #6889c2;
 $color-tamadoggy: rgba(241, 162, 58, 0.8);
 // additional colors
 $success: #80b160; // green
@@ -386,6 +387,10 @@ xPortfolio Buttons
 		  {
 			background-color: rgba(189, 139, 209, 0.8);
 		  }
+		  .portfolio-item-overlay.sample
+		  {
+			background-color: $color-sample;
+		  }
 		  .portfolio-item-overlay.tamadoggy
 		  {
 			background-color: rgba(241, 162, 58, 0.8);
@@ -410,6 +415,9 @@ xPortfolio Buttons
 		  .portfolio-item-overlay.alice
 		  {
 			background-color: rgba(189, 139, 209, 0);
+		  }
+		  .portfolio-item-overlay.sample{
+			background-color: rgba(53, 58, 77, 0.555);
 		  }
 		  .portfolio-item-overlay.tamadoggy
 		  {

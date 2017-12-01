@@ -417,6 +417,10 @@ xPortfolio Buttons
   background-color: rgba(189, 139, 209, 0.8);
 }
 
+.portfolio-item .portfolio-item-overlay.sample {
+  background-color: #6889c2;
+}
+
 .portfolio-item .portfolio-item-overlay.tamadoggy {
   background-color: rgba(241, 162, 58, 0.8);
 }
@@ -448,6 +452,10 @@ xPortfolio Buttons
 
 .portfolio-item:hover .portfolio-item-overlay.alice {
   background-color: rgba(189, 139, 209, 0);
+}
+
+.portfolio-item:hover .portfolio-item-overlay.sample {
+  background-color: rgba(53, 58, 77, 0.555);
 }
 
 .portfolio-item:hover .portfolio-item-overlay.tamadoggy {
