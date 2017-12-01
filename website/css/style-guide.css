@@ -423,6 +423,41 @@ xButtons
 
 /* -------------------------------- 
 
+xFooter 
+
+-------------------------------- */
+footer {
+  padding: 1em 1em;
+  text-align: center;
+  border-top: 0.15em solid #e6e6e6;
+  position: absolute;
+  width: 100%;
+  left: 0; }
+  @media only screen and (min-width: 48em) {
+    footer {
+      padding: 4em 8em;
+      text-align: center; } }
+  @media only screen and (min-width: 75em) {
+    footer {
+      padding: 4em 10em;
+      text-align: center; } }
+  footer h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+    padding: 0.5em 0;
+    color: #6889c2; }
+  @media only screen and (min-width: 48em) {
+    footer .contact a {
+      padding-left: 1em; } }
+  footer a {
+    color: #8d939b; }
+  footer a:hover {
+    color: #f9be5e; }
+  footer .row {
+    margin: 0; }
+
+/* -------------------------------- 
+
 xStyle Guide
 
 -------------------------------- */

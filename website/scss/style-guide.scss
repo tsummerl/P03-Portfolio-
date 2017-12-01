@@ -13,7 +13,7 @@ $color-3: #f79b4b; // orange
 $color-4: #e6e6e6; // light gray
 $color-5: #ffffff; // white
 $color-6: #7b7b81;
-$color-7: #3a4d6e;
+$color-7: #8d939b;
 
 $color-alice: rgba(189, 139, 209, 0.8);
 $color-tamadoggy: rgba(241, 162, 58, 0.8);
@@ -498,6 +498,50 @@ xButtons
 -------------------------------- */
 .in-text{
 	color: $color-secondary;
+}
+
+/* -------------------------------- 
+
+xFooter 
+
+-------------------------------- */
+footer{
+	padding: 1em 1em;
+	text-align: center;
+	@include MQ(S) {
+		padding: 4em 8em;
+		text-align: center;
+	}
+	@include MQ(L) {
+		padding: 4em 10em;
+		text-align: center;
+	}
+	border-top: 0.15em solid $color-4;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	h2{
+		font-size: 1.3em;
+		font-weight: 700;
+		padding: 0.5em 0;
+		color: $color-primary;
+	}
+	.contact{
+		a{
+			@include MQ(S) {
+				padding-left: 1em;
+			}
+		}
+	}
+	a{
+		color: $color-7;
+	}
+	a:hover{
+		color: $color-1;
+	}
+	.row{
+		margin: 0;
+	}
 }
 
 
